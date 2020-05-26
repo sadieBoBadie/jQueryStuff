@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready( function() {
+
+            var colors = ["red", "green", "blue", "pink"];
+
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+
+            function doStuff(e) {
+                console.log($("#target").css("color", colors[getRandomInt(colors.length)]));
+            }
+
+            $("#target").click(doStuff);
+     
+
+
+        // console.log(typeof(document));f
+
+        // console.dir(document);
+        // document["title"] = "Awesome title!!"
+        // document.title = "Great Wonderful Title"
+        // document.getElementById("target") = "Green Day is Ok";
+        });
+
+        
+
+
+    </script>
+</head>
+<body>
+
+    <h1>Hello World!</h1>
+    <h3 id="target">DOM (Document Object Model)</h3>
+    
+</body>
+
+</html>
